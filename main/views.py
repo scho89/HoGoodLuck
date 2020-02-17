@@ -37,5 +37,5 @@ def index(request):
     
     
             break
-
-    return HttpResponse(gamesets)
+    outputs = str(gamesets)
+    return HttpResponse(outputs)

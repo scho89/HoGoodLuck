@@ -41,6 +41,23 @@ def index(request):
         for game in gamesets:
             outputlist.append(str(game))
     
-    outputs = '<h1>Good Luck!</h1>'+'</br>'.join(outputlist)
+    html_header='''<!DOCTYPE html>
+<html>
+    <head>
+        <title>Good Luck App</title>
+    </head>
+
+'''
+
+    html_body='''<body>
+
+'''
+    html_contents = '<h1>Good Luck!</h1>'+'</br>'.join(outputlist)
+
+    html_footer='''</body>
+</html>
+'''
+    outputs = html_header+html_body+html_contents+html_footer
+
 
     return HttpResponse(outputs)

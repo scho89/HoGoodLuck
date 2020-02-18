@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Good luck!</title>
+    </head>
+    <body>
+    <h1> Good Luck!</h1>
+
+    {% if gamesets %}
+        <ul>
+            {% for gameset in gamesets %}
+                <li>{{gameset}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No gamesets available</p>
+    {% endif%}
+
+        
+    </body>
+</html>
+

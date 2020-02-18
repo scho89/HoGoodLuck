@@ -37,5 +37,10 @@ def index(request):
     
     
             break
-    outputs = str(gamesets)
-    return HttpResponse(outputs)
+    
+    context={ 
+        'gamesets':gamesets
+    }
+    
+    return render(request,'main/gl.html',context=context)
+    
